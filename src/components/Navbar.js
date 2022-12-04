@@ -1,5 +1,6 @@
 import React from 'react';
-
+import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
 export default class Navbar extends React.Component {
 	constructor(props) {
 		super(props);
@@ -34,10 +35,10 @@ export default class Navbar extends React.Component {
 			);
 		}
 		return (
-			<header class="bg-white sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center sticky top-0 z-50">
-				<header class="flex items-center justify-between px-4 py-3 sm:p-0">
+			<header class="bg-white sm:flex sm:justify-between sm:px-4  sm:items-center sticky top-0 z-50">
+				<header class="flex items-center justify-between px-4 sm:p-0 ">
 					<div>
-						{/* <img class="h-8" src={ImageOne} alt="Logo" /> */}
+						<img src={logo} alt="logo" className='h-24 w-24'/>
 					</div>
 					<div class="sm:hidden">
 						<button
@@ -53,24 +54,24 @@ export default class Navbar extends React.Component {
 				</header>
 
 				<div class={this.state.isOpen ? 'px-2 pt-2 pb-4 block' : 'px-2 pt-2 pb-4 hidden sm:flex'}>
-					<a
-						href="#"
+					<Link
+						to="landing"
 						class="mt-1 py-1 block text-black font-semibold rounded px-2 hover:text-saffron sm:mt-0 sm:ml-2"
 					>
 						Funding 
-					</a>
-					<a
-						href="#"
+					</Link>
+					<Link
+						to="investors"
 						class="mt-1 py-1 block text-black font-semibold rounded px-2 hover:text-saffron sm:mt-0 sm:ml-2"
 					>
 						Investors
-					</a>
-					<a
-						href="#"
+					</Link>
+					<Link
+						to="footer"
 						class="mt-1 py-1 block text-black font-semibold rounded px-2 hover:text-saffron sm:mt-0 sm:ml-2"
 					>
 						Resources
-					</a>
+					</Link>
                    
                    
                     <button 
